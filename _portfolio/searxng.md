@@ -340,4 +340,4 @@ Oct 13 15:13:58 ip-172-31-93-83 docker-compose[3081]: searxng    | spawned 1 off
 
 That's all. Enter the hostname you configured in `/usr/local/searxng-docker/.env` in your favourite browser and enjoy your own private searching engine! You will see somethig like that:
 
-![image1](/assets/img/searxng/searxng1.png)
+![image1](/assets/images/searxng/searxng_browser.png)
