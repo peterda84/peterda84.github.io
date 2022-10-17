@@ -39,7 +39,7 @@ C:\> aws ec2 run-instances --image-id ami-08c40ec9ead489470 --count 1 --instance
 
 Then we will see the below output, by default in json format:
 
-```JSON
+```
 {
     "Groups": [],
     "Instances": [
