@@ -2,6 +2,8 @@
 title: "BOINC"
 header:
   overlay_image: /assets/images/boinc/boinc_logo.png
+  overlay_color: "#000"
+  overlay_filter: "0.1"
   caption: "Photo credit: [**BOINC**](https://boinc.berkeley.edu/)"
 excerpt: "Install and configure a BOINC client on an EC2 instance."
 ---
