@@ -1,5 +1,8 @@
 ---
 title: "SearXNG"
+header:
+  overlay_image: /assets/images/searxng/searxng.svg
+  caption: "Photo credit: [**SearXNG**](https://github.com/searxng/searxng)"
 excerpt: "Create a SearXNG instance on AWS using Docker."
 ---
 
