@@ -343,3 +343,11 @@ Oct 13 15:13:58 ip-172-31-93-83 docker-compose[3081]: searxng    | spawned 1 off
 That's all. Enter the hostname you configured in `/usr/local/searxng-docker/.env` in your favourite browser and enjoy your own private searching engine! You will see somethig like that:
 
 ![image1](/assets/images/searxng/searxng_browser.png)
+
+
+## Summary
+
+In this project we have seen:
+- [ ] How to create an EC2 instance on Amazon AWS using the CLI
+- [ ] How to install Docker Engine and Docker Compose
+- [ ] How to install and configure searxng-docker
