@@ -1,6 +1,6 @@
 ---
 title: "BOINC"
-excerpt: "Install and configure a BOINC client on an EC2 instance (Amazon AWS)."
+excerpt: "Install and configure a BOINC client on an EC2 instance."
 ---
 
 BOINC (Berkeley Open Infrastructure for Network Computing) is an open-source system for volunteer computing. It is a high-performance distributed computing platform. It brings together as many personal computers that all together would be one of largest processing capability in the world compared with individual supercomputers. In essence, BOINC is software that can exploit the unused CPU and GPU cycles on a computer to do scientific computing — what one individual does not utilize of their computer, BOINC uses.
@@ -17,43 +17,43 @@ In this occasion we will use the AWS Management Console to spin up our virtual m
 
 We use a nice and descriptive name for the machine.
 
-![image1](/assets/img/boinc/step1.png)
+![image1](/assets/images/boinc/step1.png)
 
 ### Select the image
 
 Let's use Ubuntu 22.04 LTS.
 
-![image2](/assets/img/boinc/step2.png)
+![image2](/assets/images/boinc/step2.png)
 
 ### Select the instance type and the key par
 
 For instance type we select t2.micro since it is elegible as part of the free tier. A key pair is recommended to use to connect to the instance securely. We had formerly created a key called `linux_nvirginia`.
 
-![image3](/assets/img/boinc/step3.png)
+![image3](/assets/images/boinc/step3.png)
 
 ### Select security groups
 
 In order to SSH the instance and be able to connect to it via the BOINC manager (see later), we create and attach a security group, allowing all incoming traffic from our IP address.
 
-![image4](/assets/img/boinc/step4.png)
+![image4](/assets/images/boinc/step4.png)
 
 ### Configure storage
 
 It is ok to leave the standard setting of 8GB SSD volume.
 
-![image5](/assets/img/boinc/step5.png)
+![image5](/assets/images/boinc/step5.png)
 
 ### Our instance is being launched
 
 Just a few moments more...
 
-![image6](/assets/img/boinc/step6.png)
+![image6](/assets/images/boinc/step6.png)
 
 ### Instance up and running
 
 Now we are ready to install the BOINC client.
 
-![image7](/assets/img/boinc/step7.png)
+![image7](/assets/images/boinc/step7.png)
 
 
 ## Installing and configuring BOINC
@@ -198,7 +198,7 @@ You will find the list of known projects at [the BOINC website](https://boinc.be
 
 The first step is create an account on the site, then go to the [Credentials page](https://einsteinathome.org/account/info/edit) to see your "Account key".
 
-![einstein](/assets/img/boinc/einstein.png)
+![einstein](/assets/images/boinc/einstein.png)
 
 To attach the Einstein@Home project to our machine we simply run the following command, changing "YOUR_ACCOUNT_KEY" with our own key.
 
@@ -213,7 +213,7 @@ If we look at the processor usage of active processes with a system monitor - my
 ubuntu@ip-172-31-25-132:~$ htop
 ```
 
-![htop](/assets/img/boinc/htop2.png)
+![htop](/assets/images/boinc/htop2.png)
 
 Computing preferences (CPU, memory, disk, network usage, etc.) of clients can be modified one by one with the ```boinccmd``` interface, but also centrally on the project homepage. In case of Einstein@Home you can do it on [this link](https://einsteinathome.org/account/prefs).
 
@@ -225,19 +225,19 @@ We don't go through the installation step by step, but here is how to connect ou
 
 We choose File/Select computer...
 
-![boinc_manager](/assets/img/boinc/bmanager1.jpg)
+![boinc_manager](/assets/images/boinc/bmanager1.jpg)
 
 Enter the public IP of the EC2 instance and the password we set in the file ```gui_rpc_auth.cfg```.
 
-![boinc_manager](/assets/img/boinc/bmanager2.jpg)
+![boinc_manager](/assets/images/boinc/bmanager2.jpg)
 
 On the Project tab we see the projects we are contributing to.
 
-![boinc_manager](/assets/img/boinc/bmanager3.jpg)
+![boinc_manager](/assets/images/boinc/bmanager3.jpg)
 
 And on the Tasks tab, we see the tasks assigned to our client.
 
-![boinc_manager](/assets/img/boinc/bmanager4.jpg)
+![boinc_manager](/assets/images/boinc/bmanager4.jpg)
 
 For a detailed explanation how BOINC Manager works, please refer to the [BOINC Manual](https://boinc.berkeley.edu/wiki/User_manual).
 
