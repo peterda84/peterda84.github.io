@@ -114,8 +114,8 @@ defaults:
       path: ""
       type: portfolio
     values:
-      layout: single
-      classes: wide
+      layout: splash
+      # classes: wide
       author_profile: false
       share: true   
 
