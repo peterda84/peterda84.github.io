@@ -1,6 +1,8 @@
 ---
 title: "SearXNG"
 header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
   overlay_image: /assets/images/searxng/searxng.svg
   caption: "Photo credit: [**SearXNG**](https://github.com/searxng/searxng)"
 excerpt: "Create a SearXNG instance on AWS using Docker."
