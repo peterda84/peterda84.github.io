@@ -9,6 +9,6 @@ main:
     url: /portfolio/
   - title: "Certs/skills"
     url: /certs/
-  - title: "About"
-    url: /about/
+  # - title: "About"
+  #  url: /about/
 
