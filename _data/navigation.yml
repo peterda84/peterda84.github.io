@@ -9,3 +9,5 @@ main:
     url: /portfolio/
   - title: "About"
     url: /about/
+  - title: "Certs and skills"
+    url: /certs/
