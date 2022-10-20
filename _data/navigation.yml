@@ -7,7 +7,8 @@ main:
   #  url: /tags/
   - title: "Projects"
     url: /portfolio/
+  - title: "Certs/skills"
+    url: /certs/
   - title: "About"
     url: /about/
-  - title: "Certs and skills"
-    url: /certs/
+
