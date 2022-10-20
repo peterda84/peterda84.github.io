@@ -58,9 +58,10 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "David Peter"
-  avatar : "/assets/images/dphoto.jpg"
-  bio    : "Quality Engineer for 10+ years. Passionate about Linux, computer networking and cloud."
+  name      : "David Peter"
+  avatar    : "/assets/images/dphoto.jpg"
+  bio       : "Quality Engineer for 10+ years. Passionate about Linux, computer networking and cloud."
+  location  : "Buenos Aires"
   links:
     #- label: "Website"
     #  icon: "fas fa-fw fa-link"
