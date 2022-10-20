@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "David Peter"
-  # avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/dphoto.jpg"
   bio    : "Quality Engineer for 10+ years. Passionate about Linux, computer networking and cloud."
   links:
     #- label: "Website"
