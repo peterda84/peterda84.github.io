@@ -3,6 +3,24 @@ permalink: /certs/
 title: "Certifications and skills"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+You can find here some of the courses I have attended. For the full list please visit my [LinkedIn account](https://www.linkedin.com/in/davidpeter84/details/certifications/).
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+#### [Technical Support Fundamentals](https://www.coursera.org/account/accomplishments/certificate/GJCS5YLVCRGM)
+
+Issued Jul 2022 by Coursera - Credential ID GJCS5YLVCRGM
+
+#### [Amazon EC2 Deep Dive](https://www.linkedin.com/learning/certificates/1c25c206e59889cc237b1f65a9965940f507bcf7eec85a152ee400048b9cb708)
+
+Issued Jun 2022 by LinkedIn
+
+#### [Learning Bash Scripting](https://www.linkedin.com/learning/certificates/57ff00775769f16989ab69950df7cddb094020a2b893879ae2bfd1f4345d0f11)
+
+Issued Nov 2021 by LinkedIn
+
+#### [Linux: Multitasking at the Command Line](https://www.linkedin.com/learning/certificates/81cebbad6e16220f93031028db7cbd39a358ae6e048de2b64fa55be14696b7e8)
+
+Issued Nov 2021 by LinkedIn
+
+#### [Learning Subnetting](https://www.linkedin.com/learning/certificates/443b966e230c8c93b720e3ad0d4b08e450d6e29fc5002b66dcb8298c80bbed02)
+
+Issued Jun 2021 by LinkedIn
