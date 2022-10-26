@@ -1,9 +1,14 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
+  #- title: "Posts"
+  # url: /posts/
+  #- title: "Categories"
+  #  url: /categories/
+  #- title: "Tags"
+  #  url: /tags/
+  - title: "Projects"
+    url: /portfolio/
+  - title: "Certs/skills"
+    url: /certs/
+  # - title: "About"
+  #  url: /about/
+
