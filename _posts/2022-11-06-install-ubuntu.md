@@ -18,7 +18,7 @@ I have always wanted to try some OS on my RPi 4 that is not Raspberry Pi OS. In 
 
 ![image3](/assets/images/ubuntu/rpi_imager03.png)
 
-### Step3: Insert the SD card on your computer. Open the Imager and click on the button 'Choose OS'.
+### Step3: Insert an SD card into your computer. Open the Imager and click on the button 'Choose OS'.
 
 ![image4](/assets/images/ubuntu/rpi_imager04.png)
 
@@ -30,7 +30,7 @@ I have always wanted to try some OS on my RPi 4 that is not Raspberry Pi OS. In 
 
 ![image6](/assets/images/ubuntu/rpi_imager06.png)
 
-### Step6: Choose the OS version according to your needs. I have opt for Ubuntu Server 22.04 LTS (64-bit).
+### Step6: Choose the OS version according to your needs. I have opted for Ubuntu Server 22.04 LTS (64-bit).
 
 ![image7](/assets/images/ubuntu/rpi_imager07.png)
 
@@ -42,7 +42,7 @@ I have always wanted to try some OS on my RPi 4 that is not Raspberry Pi OS. In 
 
 ![image9](/assets/images/ubuntu/rpi_imager09.png)
 
-### Step9: Click on the small gear icon on the left bottom for Advanced options. Modify the setting by your needs. I have enabled SSH and set a password since I use my Raspberry Pi as a headless server.
+### Step9: Click on the small gear icon on the left bottom for Advanced options. Modify the setting as your needs. I have enabled SSH and set a password since I use my Raspberry Pi as a headless server.
 
 ![image10](/assets/images/ubuntu/rpi_imager10.png)
 
