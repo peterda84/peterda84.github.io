@@ -53,3 +53,43 @@ I have always wanted to try some OS on my RPi 4 that is not Raspberry Pi OS. In 
 ### Step 11: That's all, you can remove the SD card with the fresh OS installed on it. Insert it into the RPi and start to use.
 
 ![image12](/assets/images/ubuntu/rpi_imager12.png)
+
+### Step12: Ssh into your server using the credentials you have set in the Imager
+
+```console
+C:\Users\david>ssh pi@192.168.88.100
+The authenticity of host '192.168.88.100 (192.168.88.100)' can't be established.
+ECDSA key fingerprint is SHA256:r55Ed3ca4XO3+xDo2YigYkd1QtRbrTC5SMzhDZKqDJs.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.88.100' (ECDSA) to the list of known hosts.
+pi@192.168.88.100's password:
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-1012-raspi aarch64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Nov  6 19:28:21 UTC 2022
+
+  System load:  2.14306640625     Temperature:           44.8 C
+  Usage of /:   7.6% of 28.94GB   Processes:             149
+  Memory usage: 5%                Users logged in:       0
+  Swap usage:   0%                IPv4 address for eth0: 192.168.88.100
+
+0 updates can be applied immediately.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+```
