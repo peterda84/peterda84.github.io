@@ -78,3 +78,56 @@ After this operation, 278 MB of additional disk space will be used.
 Do you want to continue? [Y/n]
 ...
 ```
+
+## Improving SSH security
+
+```
+C:\Users\david\.ssh>ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\david/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\david/.ssh/id_rsa.
+Your public key has been saved in C:\Users\david/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:Ail4mz4l2BqcHeoHr34L9vFGZUlksw9e6NyWS4Ekeys david@DESKTOP-VIQEJES
+The key's randomart image is:
++---[RSA 3072]----+
+| ..+             |
+| .+  .           |
+|..o+o            |
+|o+*++..          |
+|oB=*.o.+S.       |
+|=+==+ +.O        |
+|o=o- + * +       |
+|..**  .E. .      |
+|.o.o    ..       |
++----[SHA256]-----+
+```
+
+```
+C:\Users\david\.ssh>scp id_rsa.pub peterda@192.168.88.100:/home/peterda/.ssh
+peterda@192.168.88.100's password:
+id_rsa.pub                                                                              100%  576     0.6KB/s   00:00
+```
+
+```
+peterda@ubuntu:~$ cd .ssh
+peterda@ubuntu:~/.ssh$ ls
+authorized_keys  id_rsa.pub
+peterda@ubuntu:~/.ssh$ cat id_rsa.pub >> authorized_keys
+```
+
+```
+peterda@ubuntu:~/.ssh$ sudo nano /etc/ssh/sshd_config
+[sudo] password for peterda:
+```
+
+```
+PasswordAuthentication no
+UsePAM no
+```
+
+```
+peterda@ubuntu:~/.ssh$ sudo systemctl reload ssh
+```
