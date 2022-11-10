@@ -1,5 +1,5 @@
 ---
-title: "Server hardening"
+title: "Server hardening (in progress)"
 header:
   overlay_image: /assets/images/server_hardening/server_room.jpg
   overlay_color: "#000"
