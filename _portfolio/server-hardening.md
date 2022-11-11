@@ -1,5 +1,5 @@
 ---
-title: "Server hardening (in progress)"
+title: "Linux server hardening (in progress)"
 header:
   overlay_image: /assets/images/server_hardening/server_room.jpg
   overlay_color: "#000"
@@ -7,7 +7,11 @@ header:
 excerpt: "Increase the security of an off-the-shelf server"
 ---
 
-## Apt update and apt upgrade
+This is an expanding list of steps for a secure Linux server. I use Ubuntu 22.04 LTS for this project.
+
+## Keeping the OS patched and updated
+
+The very first thing we can do after the first boot of the OS is to run apt update && apt upgrade
 
 ```console
 peterda@ubuntu:~$ sudo apt update
@@ -79,7 +83,9 @@ Do you want to continue? [Y/n]
 ...
 ```
 
-## Improving SSH security
+## Remote access security
+
+Improving SSH security
 
 ```
 C:\Users\david\.ssh>ssh-keygen
@@ -131,3 +137,11 @@ UsePAM no
 ```
 peterda@ubuntu:~/.ssh$ sudo systemctl reload ssh
 ```
+
+## Hard disk encryption
+
+## Firewall installation/configuration
+
+## User accounts and password policies
+
+## to be continued...
