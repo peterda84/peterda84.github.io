@@ -7,11 +7,11 @@ header:
 excerpt: "Increase the security of an off-the-shelf server"
 ---
 
-This is an expanding list of prectices for a secure Linux server. The following instructions assume that you are using a Debian based distribution.
+This is an expanding list of practices for a secure Linux server. The following instructions assume that you are using a Debian based distribution.
 
 ## Keeping the OS patched and updated
 
-The very first thing we can do after the first boot of the OS is to run apt update && apt upgrade
+The very first thing we can do after the first boot of the OS is to run apt update && apt upgrade.
 
 ```console
 peterda@ubuntu:~$ sudo apt update
@@ -85,9 +85,9 @@ Do you want to continue? [Y/n]
 
 ## Improving remote access (SSH) security
 
-Use key-based authentication instead of passwords
+Use key-based authentication instead of passwords.
 
-Generate an SSH key pair using `ssh-keygen` on the client. Keys are stored by default in the .ssh folder in the user’s home directory, but this can be changed. Here we can generate them on Windows:
+Generate an SSH key pair using `ssh-keygen` on the client. Keys are stored by default in the `.ssh folder` in the user’s home directory, but this can be changed. Here we generate them on Windows:
 
 ```
 C:\Users\david\.ssh>ssh-keygen
@@ -113,7 +113,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Copy the public key to the `.ssh` folder in the server.
+Copy the public key to the `.ssh` folder in the server. Here we use `scp` to copy.
 
 ```
 C:\Users\david\.ssh>scp id_rsa.pub peterda@192.168.88.100:/home/peterda/.ssh
@@ -129,13 +129,13 @@ authorized_keys  id_rsa.pub
 peterda@ubuntu:~/.ssh$ cat id_rsa.pub >> authorized_keys
 ```
 
-Open the ssh config file with your editor of choice.
+Open the ssh config file at `/etc/ssh/sshd_config` with your editor of choice.
 
 ```
 peterda@ubuntu:~/.ssh$ sudo nano /etc/ssh/sshd_config
 [sudo] password for peterda:
 ```
-Change the configuration as follows.
+Change the configuration as follows:
 
 ```
 PasswordAuthentication no
@@ -146,6 +146,8 @@ Reload the ssh service so the changes in the configuration file take effect.
 ```
 peterda@ubuntu:~/.ssh$ sudo systemctl reload ssh
 ```
+
+Next time you try to ssh to the server, no password will be required but the keys will be used for authentication.
 
 ## Hard disk encryption
 
