@@ -4,6 +4,7 @@ header:
   overlay_image: /assets/images/server_hardening/server_room.jpg
   overlay_color: "#000"
   overlay_filter: "0.1"
+  caption: "Photo credit: [**Pexels**](https://www.pexels.com/)"
 excerpt: "Increase the security of an off-the-shelf server"
 ---
 
