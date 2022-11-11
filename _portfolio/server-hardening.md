@@ -7,7 +7,7 @@ header:
 excerpt: "Increase the security of an off-the-shelf server"
 ---
 
-This is an expanding list of steps for a secure Linux server. I use Ubuntu 22.04 LTS for this project.
+This is an expanding list of prectices for a secure Linux server. The following instructions assume that you are using a Debian based distribution.
 
 ## Keeping the OS patched and updated
 
@@ -83,9 +83,11 @@ Do you want to continue? [Y/n]
 ...
 ```
 
-## Remote access security
+## Improving remote access (SSH) security
 
-Improving SSH security
+Use key-based authentication instead of passwords
+
+Generate an SSH key pair using `ssh-keygen` on the client. Keys are stored by default in the .ssh folder in the user’s home directory, but this can be changed. Here we can generate them on Windows:
 
 ```
 C:\Users\david\.ssh>ssh-keygen
@@ -111,11 +113,14 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
+Copy the public key to the `.ssh` folder in the server.
+
 ```
 C:\Users\david\.ssh>scp id_rsa.pub peterda@192.168.88.100:/home/peterda/.ssh
 peterda@192.168.88.100's password:
 id_rsa.pub                                                                              100%  576     0.6KB/s   00:00
 ```
+Copy the content of the public key to the `authorized_keys` file.
 
 ```
 peterda@ubuntu:~$ cd .ssh
@@ -124,15 +129,19 @@ authorized_keys  id_rsa.pub
 peterda@ubuntu:~/.ssh$ cat id_rsa.pub >> authorized_keys
 ```
 
+Open the ssh config file with your editor of choice.
+
 ```
 peterda@ubuntu:~/.ssh$ sudo nano /etc/ssh/sshd_config
 [sudo] password for peterda:
 ```
+Change the configuration as follows.
 
 ```
 PasswordAuthentication no
 UsePAM no
 ```
+Reload the ssh service so the changes in the configuration file take effect.
 
 ```
 peterda@ubuntu:~/.ssh$ sudo systemctl reload ssh
