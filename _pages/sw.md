@@ -3,7 +3,7 @@ permalink: /sw/
 title: "Software I use"
 ---
 
-This is a growing list of software I use.
+This is an updated list of software I use.
 
 - [Ubuntu 22.04LTS](https://ubuntu.com/): a Linux distribution based on Debian and composed mostly of free and open-source software.
 - [Fan Shim](https://github.com/pimoroni/fanshim-python): Python library for the Fan SHIM for Raspberry Pi.
