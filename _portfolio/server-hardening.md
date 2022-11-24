@@ -86,7 +86,19 @@ Do you want to continue? [Y/n]
 
 ## Improving remote access (SSH) security
 
-Use key-based authentication instead of passwords.
+### Disable SSH
+
+Of course, only if you do not have intention to use it. In that case make sure that you turn it off. That goes for any other service you might run on your server.
+
+```console
+peterda@ubuntu:~$ sudo systemctl stop sshd
+[sudo] password for peterda:
+peterda@ubuntu:~$ sudo systemctl disable sshd
+Removed /etc/systemd/system/multi-user.target.wants/ssh.service.
+Removed /etc/systemd/system/sshd.service.
+```
+
+### Use key-based authentication instead of passwords.
 
 Generate an SSH key pair using `ssh-keygen` on the client. Keys are stored by default in the `.ssh folder` in the user’s home directory, but this can be changed. Here we generate them on Windows:
 
@@ -142,10 +154,10 @@ Change the configuration as follows:
 PasswordAuthentication no
 UsePAM no
 ```
-Reload the ssh service so the changes in the configuration file take effect.
+Restart the ssh service so the changes in the configuration file take effect.
 
 ```
-peterda@ubuntu:~/.ssh$ sudo systemctl reload ssh
+peterda@ubuntu:~/.ssh$ sudo systemctl restart ssh
 ```
 
 Next time you try to ssh to the server, no password will be required but the keys will be used for authentication.
