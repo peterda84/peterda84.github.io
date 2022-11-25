@@ -98,6 +98,17 @@ Removed /etc/systemd/system/multi-user.target.wants/ssh.service.
 Removed /etc/systemd/system/sshd.service.
 ```
 
+### Change the default port that SSH listens on
+
+It will not add so much extra security, but it will protect your server from a brute force attack that do not spend time scanning dynamic ports.
+
+Before changing of any configuration file, it is a good practice to make a backup of it.
+
+```console
+peterda@ubuntu:~$ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+[sudo] password for peterda:
+```
+
 ### Use key-based authentication instead of passwords.
 
 Generate an SSH key pair using `ssh-keygen` on the client. Keys are stored by default in the `.ssh folder` in the user’s home directory, but this can be changed. Here we generate them on Windows:
