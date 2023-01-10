@@ -3,7 +3,11 @@ permalink: /certs/
 title: "Certifications and skills"
 ---
 
-You can find here some of the courses I have attended. For the full list please visit my [LinkedIn account](https://www.linkedin.com/in/davidpeter84/details/certifications/).
+You can find here some of the certifications I have obtained. For the full list please visit my [LinkedIn account](https://www.linkedin.com/in/davidpeter84/details/certifications/).
+
+#### [AWS Cloud Quest: Cloud Practitioner](https://www.credly.com/badges/88be5b64-4527-43a2-b174-5ee217cee477)
+
+Issued Jan 2023 by AWS
 
 #### [Technical Support Fundamentals](https://www.coursera.org/account/accomplishments/certificate/GJCS5YLVCRGM)
 
