@@ -13,9 +13,9 @@ According to Wikipedia, Pi-hole is a Linux network-level advertisement and Inter
 
 Installation steps on https://github.com/pi-hole/docker-pi-hole/
 
-First attempt
+Let's have a first attempt, without DHCP and any additional extra configuration
 
-Create ```docker-compose.yml```
+First step is to create a ```docker-compose.yml``` file
 
 ```
 version: "3"
@@ -34,4 +34,4 @@ services:
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
     restart: unless-stopped
-    ```
+```
