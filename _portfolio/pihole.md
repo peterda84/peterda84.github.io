@@ -68,3 +68,5 @@ The problem is that Ubuntu 17.10+ includes ```systemd-resolved``` which is confi
 ```console
 peterda@ubuntu:~/scripts/docker_pihole$ sudo sed -r -i.orig 's/#?DNSStubListener=yes/DNSStubListener=no/g' /etc/systemd/resolved.conf
 ```
+
+Please note the ```-i.orig``` option that make a backup of the ```resolved.conf``` file with .orig extension then edits the file in place.
