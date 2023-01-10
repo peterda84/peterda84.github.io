@@ -1,10 +1,10 @@
 ---
 title: "Pi-hole"
-#header:
-#  overlay_image: /assets/images/pihole/pihole_logo.png
-#  overlay_color: "#000"
-#  overlay_filter: "0.1"
-#  caption: "Photo credit: [**Wikipedia**](https://en.wikipedia.org/wiki/Pi-hole)"
+header:
+  overlay_image: /assets/images/pihole/pihole_logo.png
+  overlay_color: "#000"
+  overlay_filter: "0.1"
+  caption: "Photo credit: [**Wikipedia**](https://en.wikipedia.org/wiki/Pi-hole)"
 excerpt: "Install Docker Pi-hole on a Raspberry Pi"
 ---
 
