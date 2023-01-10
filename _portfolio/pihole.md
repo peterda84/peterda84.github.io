@@ -14,7 +14,7 @@ Installation steps, variable descriptions, tips and much more can be found on th
 
 ## Quick start
 
-Let's have a first attempt, without DHCP and any additional extra configuration. We are using Ubuntu on the Raspberry Pi:
+Let's have a first attempt, without DHCP and any additional extra configuration. We will use Ubuntu on the Raspberry Pi:
 
 ```console
 peterda@ubuntu:~$ cat /etc/issue
@@ -42,7 +42,7 @@ services:
     restart: unless-stopped
 ```
 
-Then run ```docker compose up -d``` to build and start pi-hole:
+Then run ```docker compose up -d``` to build and start pi-hole. It must be run in the same directory where the previous script was saved.
 
 ```console
 peterda@ubuntu:~/scripts/docker_pihole$ sudo docker compose up -d
@@ -63,9 +63,9 @@ peterda@ubuntu:~/scripts/docker_pihole$ sudo docker compose up -d
 Error response from daemon: driver failed programming external connectivity on endpoint pihole (a3e99f68b887ec4a2b671b98a91bceec7f0884d557f7308096cf15ce9e5c0632): Error starting userland proxy: listen tcp4 0.0.0.0:53: bind: address already in use
 ```
 
-Here I realized that port 53 is already in use. In the same Github repo there is an explanation and solution for the problem on https://github.com/pi-hole/docker-pi-hole/#installing-on-ubuntu-or-fedora
+Here I realized that port 53 is already in use. In the same Github repo there is an explanation and solution for the problem: (https://github.com/pi-hole/docker-pi-hole/#installing-on-ubuntu-or-fedora)
 
-The problem is that Ubuntu 17.10+ includes ```systemd-resolved``` which is configured by default to implement a caching DNS stub resolver. This will prevent pi-hole from listening on port 53. The stub resolver should be disabled with:
+The issue is that Ubuntu 17.10+ includes ```systemd-resolved``` which is configured by default to implement a caching DNS stub resolver. This will prevent pi-hole from listening on port 53. The stub resolver should be disabled with:
 
 ```console
 peterda@ubuntu:~/scripts/docker_pihole$ sudo sed -r -i.orig 's/#?DNSStubListener=yes/DNSStubListener=no/g' /etc/systemd/resolved.conf
@@ -105,7 +105,7 @@ s6-rc: info: service legacy-services: starting
 s6-rc: info: service legacy-services successfully started
 ```
 
-In order to access the admin page, visit http://IP_ADDRESS_OF_YOUR_SERVER/admin. To log in, use the password found in the previous step. You will see something like this:
+In order to access the admin page, visit (http://IP_ADDRESS_OF_YOUR_SERVER/admin). To log in, use the password found in the previous step. You will see something like this:
 
 ![image1](/assets/images/pihole/admin_site.jpg)
 
