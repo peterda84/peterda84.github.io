@@ -10,7 +10,9 @@ excerpt: "Install Docker Pi-hole on a Raspberry Pi"
 
 According to Wikipedia, Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but can be installed on almost any Linux machine.
 
-Installation steps, variable descriptions, tips and much more can be found on the project's [Github repo](https://github.com/pi-hole/docker-pi-hole/).
+Installation steps, variable descriptions, tips and much more can be found on the project's [Github repo](https://github.com/pi-hole/docker-pi-hole/) and [Documentation page](https://docs.pi-hole.net).
+
+## Quick start
 
 Let's have a first attempt, without DHCP and any additional extra configuration. We are using Ubuntu on the Raspberry Pi:
 
