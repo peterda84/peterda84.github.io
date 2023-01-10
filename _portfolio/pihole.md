@@ -10,9 +10,16 @@ excerpt: "Install Docker Pi-hole on a Raspberry Pi"
 
 According to Wikipedia, Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but can be installed on almost any Linux machine.
 
-Installation steps, variable descriptions, tips and much more can be found on the project's Github repo on https://github.com/pi-hole/docker-pi-hole/
+Installation steps, variable descriptions, tips and much more can be found on the project's [Github repo](https://github.com/pi-hole/docker-pi-hole/).
 
-Let's have a first attempt, without DHCP and any additional extra configuration. The first step is to create a ```docker-compose.yml``` file with the following content:
+Let's have a first attempt, without DHCP and any additional extra configuration. We are using Ubuntu on the Raspberry Pi:
+
+```console
+peterda@ubuntu:~$ cat /etc/issue
+Ubuntu 22.04.1 LTS \n \l
+```
+
+The first step is to create a ```docker-compose.yml``` file with the following content:
 
 ```
 version: "3"
@@ -54,7 +61,7 @@ peterda@ubuntu:~/scripts/docker_pihole$ sudo docker compose up -d
 Error response from daemon: driver failed programming external connectivity on endpoint pihole (a3e99f68b887ec4a2b671b98a91bceec7f0884d557f7308096cf15ce9e5c0632): Error starting userland proxy: listen tcp4 0.0.0.0:53: bind: address already in use
 ```
 
-Here I realized that port 53 is already in use. In the same Github repo there is an explanation and solution for the problem https://github.com/pi-hole/docker-pi-hole/#installing-on-ubuntu-or-fedora
+Here I realized that port 53 is already in use. In the same Github repo there is an explanation and solution for the problem on https://github.com/pi-hole/docker-pi-hole/#installing-on-ubuntu-or-fedora
 
 The problem is that Ubuntu 17.10+ includes ```systemd-resolved``` which is configured by default to implement a caching DNS stub resolver. This will prevent pi-hole from listening on port 53. The stub resolver should be disabled with:
 
