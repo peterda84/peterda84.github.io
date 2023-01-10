@@ -105,7 +105,7 @@ s6-rc: info: service legacy-services: starting
 s6-rc: info: service legacy-services successfully started
 ```
 
-In order to access the admin page, visit (http://IP_ADDRESS_OF_YOUR_SERVER/admin). To log in, use the password found in the previous step. You will see something like this:
+In order to access the admin page, visit [http://IP_ADDRESS_OF_YOUR_SERVER/admin](http://IP_ADDRESS_OF_YOUR_SERVER/admin). To log in, use the password found in the previous step. You will see something like this:
 
 ![image1](/assets/images/pihole/admin_site.jpg)
 
