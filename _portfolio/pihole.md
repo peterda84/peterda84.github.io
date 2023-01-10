@@ -35,7 +35,7 @@ services:
 
 Then run ```docker compose up -d``` to build and start pi-hole:
 
-console```
+```console
 peterda@ubuntu:~/scripts/docker_pihole$ sudo docker compose up -d
 [+] Running 10/10
  ⠿ pihole Pulled                                                                                                    55.1s
@@ -58,6 +58,6 @@ Here I realized that port 53 is already in use. In the same Github repo there is
 
 The problem is that Ubuntu 17.10+ includes ```systemd-resolved``` which is configured by default to implement a caching DNS stub resolver. This will prevent pi-hole from listening on port 53. The stub resolver should be disabled with:
 
-console```
+```console
 peterda@ubuntu:~/scripts/docker_pihole$ sudo sed -r -i.orig 's/#?DNSStubListener=yes/DNSStubListener=no/g' /etc/systemd/resolved.conf
 ```
