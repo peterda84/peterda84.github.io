@@ -108,3 +108,7 @@ s6-rc: info: service legacy-services successfully started
 In order to access the admin page, visit http://IP_ADDRESS_OF_YOUR_SERVER/admin. To log in, use the password found in the previous step. You will see something like this:
 
 ![image1](/assets/images/pihole/admin_site.jpg)
+
+Once Pi-hole is installed, we will need to configure our router to have DHCP clients use Pi-hole as their DNS server. I am using a Mikrotik router in my lab and set the DNS as per in the image below:
+
+![image2](/assets/images/pihole/winbox.jpg)
