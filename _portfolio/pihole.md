@@ -70,3 +70,35 @@ peterda@ubuntu:~/scripts/docker_pihole$ sudo sed -r -i.orig 's/#?DNSStubListener
 ```
 
 Please note the ```-i.orig``` option that make a backup of the ```resolved.conf``` file with .orig extension then edits the file in place.
+Then we need to restart systemd-resolved:
+
+```console
+peterda@ubuntu:~/scripts/docker_pihole$ sudo systemctl restart systemd-resolved
+```
+
+Since we have not configured the ```WEBPASSWORD``` variable in our .yml file, we must run this command to find our random password to the admin page:
+
+```console
+peterda@ubuntu:~/scripts/docker_pihole$ sudo docker logs pihole | grep random
+s6-rc: info: service s6rc-oneshot-runner: starting
+s6-rc: info: service s6rc-oneshot-runner successfully started
+s6-rc: info: service fix-attrs: starting
+s6-rc: info: service fix-attrs successfully started
+s6-rc: info: service legacy-cont-init: starting
+s6-rc: info: service legacy-cont-init successfully started
+s6-rc: info: service cron: starting
+s6-rc: info: service cron successfully started
+s6-rc: info: service _uid-gid-changer: starting
+s6-rc: info: service _uid-gid-changer successfully started
+s6-rc: info: service _startup: starting
+  [i] Assigning random password: jd87LF4P
+s6-rc: info: service _startup successfully started
+s6-rc: info: service pihole-FTL: starting
+s6-rc: info: service pihole-FTL successfully started
+s6-rc: info: service lighttpd: starting
+s6-rc: info: service lighttpd successfully started
+s6-rc: info: service _postFTL: starting
+s6-rc: info: service _postFTL successfully started
+s6-rc: info: service legacy-services: starting
+s6-rc: info: service legacy-services successfully started
+```
