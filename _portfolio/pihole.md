@@ -104,3 +104,5 @@ s6-rc: info: service _postFTL successfully started
 s6-rc: info: service legacy-services: starting
 s6-rc: info: service legacy-services successfully started
 ```
+
+In order to access the admin page, visit http://IP_ADDRESS_OF_YOUR_SERVER/admin. To log in, use the password found in the previous step.
