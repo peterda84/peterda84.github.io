@@ -63,7 +63,7 @@ peterda@ubuntu:~/scripts/docker_pihole$ sudo docker compose up -d
 Error response from daemon: driver failed programming external connectivity on endpoint pihole (a3e99f68b887ec4a2b671b98a91bceec7f0884d557f7308096cf15ce9e5c0632): Error starting userland proxy: listen tcp4 0.0.0.0:53: bind: address already in use
 ```
 
-Here I realized that port 53 is already in use. In the same Github repo there is an explanation and solution for the problem: (https://github.com/pi-hole/docker-pi-hole/#installing-on-ubuntu-or-fedora)
+Here I realized that port 53 is already in use. In the same Github repo there is an [explanation and solution](https://github.com/pi-hole/docker-pi-hole/#installing-on-ubuntu-or-fedora) for the problem.
 
 The issue is that Ubuntu 17.10+ includes ```systemd-resolved``` which is configured by default to implement a caching DNS stub resolver. This will prevent pi-hole from listening on port 53. The stub resolver should be disabled with:
 
