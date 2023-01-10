@@ -1,7 +1,7 @@
 ---
 title: "Pi-hole"
 #header:
-#  overlay_image: /assets/images/TO_BE_FILLED
+#  overlay_image: /assets/images/pihole/pihole_logo.png
 #  overlay_color: "#000"
 #  overlay_filter: "0.1"
 #  caption: "Photo credit: [**Wikipedia**](https://en.wikipedia.org/wiki/Pi-hole)"
@@ -105,4 +105,6 @@ s6-rc: info: service legacy-services: starting
 s6-rc: info: service legacy-services successfully started
 ```
 
-In order to access the admin page, visit http://IP_ADDRESS_OF_YOUR_SERVER/admin. To log in, use the password found in the previous step.
+In order to access the admin page, visit http://IP_ADDRESS_OF_YOUR_SERVER/admin. To log in, use the password found in the previous step. You will see something like this:
+
+![image1](/assets/images/pihole/admin_site.jpg)
