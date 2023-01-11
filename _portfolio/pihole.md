@@ -8,7 +8,7 @@ header:
 excerpt: "Install Docker Pi-hole on a Raspberry Pi"
 ---
 
-According to Wikipedia, Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but can be installed on almost any Linux machine.
+Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but can be installed on almost any Linux machine. (Source: Wikipedia)
 
 Installation steps, variable descriptions, tips and much more can be found on the project's [Github repo](https://github.com/pi-hole/docker-pi-hole/) and [Documentation page](https://docs.pi-hole.net).
 
@@ -31,18 +31,18 @@ services:
     container_name: pihole
     image: pihole/pihole:latest
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "80:80/tcp"
+      - "53:53/tcp"   # for DNS queries
+      - "53:53/udp"   # for DNS queries
+      - "80:80/tcp"   # http access to the admin page
     environment:
-      TZ: 'America/Argentina/Buenos_Aires'
-    volumes:
+      TZ: 'America/Argentina/Buenos_Aires'   # Set your timezone to make sure logs rotate at local midnight instead of at UTC midnight.
+    volumes:   # Volumes store your data between container upgrades
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
-    restart: unless-stopped
+    restart: unless-stopped   # restart the container after reboots
 ```
 
-Then run ```docker compose up -d``` to build and start pi-hole. It must be run in the same directory where the previous script was saved.
+Then run ```docker compose up -d``` to build and start pi-hole. It must be run in the same directory where the previous script has been saved.
 
 ```console
 peterda@ubuntu:~/scripts/docker_pihole$ sudo docker compose up -d
@@ -78,7 +78,7 @@ Then we need to restart systemd-resolved:
 peterda@ubuntu:~/scripts/docker_pihole$ sudo systemctl restart systemd-resolved
 ```
 
-Since we have not configured the ```WEBPASSWORD``` variable in our .yml file, we must run this command to find our random password to the admin page:
+Since we have not configured the ```WEBPASSWORD``` variable in our .yml file, we must run this command to find our random password in docker logs to the admin page:
 
 ```console
 peterda@ubuntu:~/scripts/docker_pihole$ sudo docker logs pihole | grep random
@@ -105,10 +105,10 @@ s6-rc: info: service legacy-services: starting
 s6-rc: info: service legacy-services successfully started
 ```
 
-In order to access the admin page, visit [http://IP_ADDRESS_OF_YOUR_SERVER/admin](http://IP_ADDRESS_OF_YOUR_SERVER/admin). To log in, use the password found in the previous step. You will see something like this:
+In order to access our server's admin page, visit [http://IP_ADDRESS_OF_YOUR_SERVER/admin](http://IP_ADDRESS_OF_YOUR_SERVER/admin). To log in, use the password found in the previous step. You will see something like this:
 
 ![image1](/assets/images/pihole/admin_site.jpg)
 
-Once Pi-hole is installed, we will need to configure our router to have DHCP clients use Pi-hole as their DNS server. I am using a Mikrotik router in my lab and set the DNS as per in the image below:
+Once Pi-hole is installed, we will need to configure our router to have DHCP clients use Pi-hole as their DNS server. This way we do not need manually set each device to use Pi-hole as its DNS server. I am using a Mikrotik router in my lab and set the DNS as per in the image below:
 
 ![image2](/assets/images/pihole/winbox.jpg)
