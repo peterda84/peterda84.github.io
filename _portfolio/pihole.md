@@ -8,7 +8,7 @@ header:
 excerpt: "Install Docker Pi-hole on a Raspberry Pi"
 ---
 
-Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but can be installed on almost any Linux machine. (Source: Wikipedia)
+Are you tired of seeing ads and trackers while browsing the web? One solution is to set up a Pi-hole on a Raspberry Pi to block unwanted traffic at the network level. Not only is it easy to do, but you can also use Docker to make the installation process even simpler. In this blog post, we will walk you through the step-by-step process of installing Docker Pi-hole on a Raspberry Pi. By the end of this guide, you'll have a fully functional ad-blocker running on your network, improving your online experience.
 
 Installation steps, variable descriptions, tips and much more can be found on the project's [Github repo](https://github.com/pi-hole/docker-pi-hole/) and [Documentation page](https://docs.pi-hole.net).
 
