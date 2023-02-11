@@ -12,7 +12,7 @@ This is an expanding list of practices for a secure Linux server. The following 
 
 ## Keeping the OS patched and updated
 
-The very first thing we can do after the first boot of the OS is to run apt update && apt upgrade.
+The very first thing we can do after the first boot of the OS is to install all available updates. They often include security patches, so it is an important step.
 
 ```console
 peterda@ubuntu:~$ sudo apt update
